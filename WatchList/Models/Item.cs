@@ -1,13 +1,14 @@
-﻿using System.ComponentModel;
+﻿using Microsoft.AspNetCore.Mvc.Rendering;
+using System.ComponentModel;
 using System.ComponentModel.DataAnnotations;
 
 namespace WatchList.Models
 {
-    public enum Type
+    public enum ItemType
     {
-        Book,
-        Film,
-        Show
+        Book = 1,
+        Film = 2,
+        Show = 3
     }
 
     public class Item
@@ -22,7 +23,7 @@ namespace WatchList.Models
         public string? Description { get; set; }
 
         [DisplayName("Type")]
-        public Type SelectedItemType { get; set; }
+        public ItemType SelectedItemType { get; set; }
 
         //[Display(Name = "Created Date")]
         //public DateTime CreatedDate = DateTime.Now;
