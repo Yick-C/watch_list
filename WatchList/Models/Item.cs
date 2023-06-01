@@ -18,12 +18,14 @@ namespace WatchList.Models
         [Required]
         public string Name { get; set; }
 
+        [StringLength(500)]
         public string? Description { get; set; }
 
+        [DisplayName("Type")]
         public Type SelectedItemType { get; set; }
 
-        [DisplayName("Created Date")]
-        public DateTime CreatedDate { get; set; }
+        //[Display(Name = "Created Date")]
+        //public DateTime CreatedDate = DateTime.Now;
 
     }
 }
