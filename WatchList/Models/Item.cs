@@ -25,8 +25,10 @@ namespace WatchList.Models
         [DisplayName("Type")]
         public ItemType SelectedItemType { get; set; }
 
-        //[Display(Name = "Created Date")]
-        //public DateTime CreatedDate = DateTime.Now;
+        [Display(Name = "Release Date")]
+        public DateTime? ReleaseDate { get; set; }
+
+        public double? Rating { get; set; }
 
     }
 }
